@@ -2,8 +2,7 @@ import { motion, useInView, useAnimation, useScroll, useTransform } from 'framer
 import { useRef, useEffect } from 'react'
 import heroImage from '../assests/hero/hero_Section.png'
 
-// Tiny helper so clsx works without needing an external library
-const clsx = (...args) => args.filter(Boolean).join(' ')
+
 
 /* Hero section — frame 01
    ─────────────────────────────────────────
@@ -83,7 +82,7 @@ export default function Hero() {
     <section
       id="home"
       ref={sectionRef}
-      className={clsx('noise', 'relative', 'w-full', 'h-[100svh]', 'min-h-[600px]', 'max-h-[1100px]', 'flex', 'items-center', 'justify-center', 'overflow-hidden', 'bg-[#edecea]')}
+      className="noise relative w-full h-[100svh] min-h-[600px] max-h-[1100px] flex items-center justify-center overflow-hidden bg-[#edecea]"
     >
       {/* ── Background Typography & Subtext (Locked in place behind subject) ── */}
       <motion.div
@@ -98,39 +97,39 @@ export default function Hero() {
           rotateX: rotateXText,
           transformPerspective: 1200
         }}
-        className={clsx('absolute', 'inset-x-0', 'top-1/2', '-translate-y-[86%]', 'flex', 'flex-col', 'items-center', 'justify-center', 'z-[1]', 'select-none', 'pointer-events-none', 'px-4', 'sm:px-8')}
+        className="absolute inset-x-0 top-1/2 -translate-y-[86%] flex flex-col items-center justify-center z-[1] select-none pointer-events-none px-4 sm:px-8"
       >
         {/* "Creative" Header */}
-        <div className={clsx('relative', 'z-[1]', '-mb-[1.8vw]', 'sm:-mb-[2.4vw]', 'md:-mb-[3vw]', 'flex', 'items-baseline', 'justify-center')}>
+        <div className="relative z-[1] -mb-[1.8vw] sm:-mb-[2.4vw] md:-mb-[3vw] flex items-baseline justify-center">
           <motion.span
             variants={fromLeft}
-            className={clsx('font-playfair-italic', 'text-[#111]', 'text-[clamp(2.8rem,7.5vw,7.5rem)]', 'leading-none', 'tracking-normal')}
+            className="font-playfair-italic text-[#111] text-[clamp(2.8rem,7.5vw,7.5rem)] leading-none tracking-normal"
           >
             Creative
           </motion.span>
         </div>
 
         {/* ── Portfolio Container (Width strictly bounded by PORTFOLIO) ── */}
-        <div className={clsx('relative', 'inline-flex', 'flex-col', 'items-center')}>
+        <div className="relative inline-flex flex-col items-center">
           {/* Giant "PORTFOLIO" Header */}
           <motion.h1
             variants={fromRight}
-            className={clsx('font-inter', 'font-bold', 'text-[#0d0d0d]', 'uppercase', 'tracking-[-0.02em]', 'text-[clamp(3.8rem,15vw,14rem)]', 'leading-[0.86]', 'text-center', 'whitespace-nowrap')}
+            className="font-inter font-bold text-[#0d0d0d] uppercase tracking-[-0.02em] text-[clamp(3.8rem,15vw,14rem)] leading-[0.86] text-center whitespace-nowrap"
           >
             PORTFOLIO
           </motion.h1>
 
           {/* ── Left & Right Meta Subtext (Strictly within PORTFOLIO width) ── */}
-          <div className={clsx('w-full', 'flex', 'justify-between', 'items-center', 'px-1', 'sm:px-2', 'mt-3', 'sm:mt-4', 'md:mt-5', 'overflow-hidden')}>
+          <div className="w-full flex justify-between items-center px-1 sm:px-2 mt-3 sm:mt-4 md:mt-5 overflow-hidden">
             <motion.span
               variants={fromLeft}
-              className={clsx('font-inter', 'font-bold', 'text-[#111]', 'tracking-wide', 'text-[clamp(12px,1.25vw,16px)]')}
+              className="font-inter font-bold text-[#111] tracking-wide text-[clamp(12px,1.25vw,16px)]"
             >
               Graphic Designer &amp; Photography
             </motion.span>
             <motion.span
               variants={fromRight}
-              className={clsx('font-inter', 'font-bold', 'text-[#111]', 'tracking-wide', 'text-[clamp(12px,1.25vw,16px)]')}
+              className="font-inter font-bold text-[#111] tracking-wide text-[clamp(12px,1.25vw,16px)]"
             >
               Yash Partap Singh
             </motion.span>
@@ -142,7 +141,7 @@ export default function Hero() {
       {/* Scroll parallax container */}
       <motion.div
         style={{ y: yPerson, scale: scalePerson, transformOrigin: 'bottom center' }}
-        className={clsx('absolute', 'bottom-0', 'left-1/2', '-translate-x-1/2', 'z-[2]', 'flex', 'items-end', 'justify-center', 'pointer-events-none')}
+        className="absolute bottom-0 left-1/2 -translate-x-1/2 z-[2] flex items-end justify-center pointer-events-none"
       >
         {/* Entrance animation container */}
         <motion.div
@@ -153,7 +152,7 @@ export default function Hero() {
           <img
             src={heroImage}
             alt="Yash Partap Singh"
-            className={clsx('hero-person-shadow', 'h-[68vh]', 'sm:h-[76vh]', 'md:h-[82vh]', 'max-h-[850px]', 'min-h-[440px]', 'w-auto', 'max-w-[92vw]', 'object-contain', 'object-bottom', 'block')}
+            className="hero-person-shadow h-[68vh] sm:h-[76vh] md:h-[82vh] max-h-[850px] min-h-[440px] w-auto max-w-[92vw] object-contain object-bottom block"
           />
         </motion.div>
       </motion.div>

@@ -7,7 +7,6 @@ import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-const clsx = (...args) => args.filter(Boolean).join(' ')
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -47,12 +46,12 @@ export default function GraduationGrid() {
   }, [])
 
   return (
-    <section id="graduation-grid" ref={sectionRef} className={clsx('noise', 'relative', 'w-full', 'min-h-screen', 'flex', 'flex-col', 'justify-center', 'items-center', 'overflow-hidden', 'bg-[#f8f8f8]', 'px-6', 'sm:px-10', 'md:px-16', 'py-24')}>
+    <section id="graduation-grid" ref={sectionRef} className="noise relative w-full min-h-screen flex flex-col justify-center items-center overflow-hidden bg-[#f8f8f8] px-6 sm:px-10 md:px-16 py-24">
       
       {/* Decorative Rings */}
       {/* Top Right Light Gradient Ring */}
       <div 
-        className={clsx('deco-tr', 'absolute', '-top-[15%]', '-right-[10%]', 'w-[350px]', 'h-[350px]', 'lg:w-[600px]', 'lg:h-[600px]', 'rounded-full', 'pointer-events-none')}
+        className="deco-tr absolute -top-[15%] -right-[10%] w-[350px] h-[350px] lg:w-[600px] lg:h-[600px] rounded-full pointer-events-none"
         style={{
           background: 'linear-gradient(to bottom left, #ffffff 20%, #999999 100%)',
           maskImage: 'radial-gradient(circle, transparent 55%, black 55.5%)',
@@ -62,7 +61,7 @@ export default function GraduationGrid() {
       
       {/* Bottom Left Dark Ring */}
       <div 
-        className={clsx('deco-bl', 'absolute', '-bottom-[15%]', '-left-[10%]', 'w-[350px]', 'h-[350px]', 'lg:w-[500px]', 'lg:h-[500px]', 'rounded-full', 'pointer-events-none')}
+        className="deco-bl absolute -bottom-[15%] -left-[10%] w-[350px] h-[350px] lg:w-[500px] lg:h-[500px] rounded-full pointer-events-none"
         style={{
           background: 'linear-gradient(to bottom left, #444444 0%, #000000 80%)',
           maskImage: 'radial-gradient(circle, transparent 55%, black 55.5%)',
@@ -72,7 +71,7 @@ export default function GraduationGrid() {
       
       {/* Bottom Left Light Ring */}
       <div 
-        className={clsx('deco-bl', 'absolute', '-bottom-[5%]', 'left-[8%]', 'w-[250px]', 'h-[250px]', 'lg:w-[350px]', 'lg:h-[350px]', 'rounded-full', 'pointer-events-none')}
+        className="deco-bl absolute -bottom-[5%] left-[8%] w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] rounded-full pointer-events-none"
         style={{
           background: 'linear-gradient(to bottom left, #ffffff 20%, #999999 100%)',
           maskImage: 'radial-gradient(circle, transparent 55%, black 55.5%)',
@@ -82,27 +81,27 @@ export default function GraduationGrid() {
       />
 
       {/* Heading */}
-      <div className={clsx('section-heading', 'relative', 'z-10', 'flex', 'flex-col', 'items-center', 'text-center', '!mb-12', 'md:mb-16')}>
-        <div className={clsx('flex', 'flex-col', 'gap-0', 'items-center', 'text-center')}>
-          <span className={clsx('font-inter', 'font-black', 'tracking-tight', 'text-[#111]', 'leading-none', 'text-[clamp(40px,6vw,72px)]')}>
+      <div className="section-heading relative z-10 flex flex-col items-center text-center !mb-12 md:mb-16">
+        <div className="flex flex-col gap-0 items-center text-center">
+          <span className="font-inter font-black tracking-tight text-[#111] leading-none text-[clamp(40px,6vw,72px)]">
             Graduation
           </span>
-          <span className={clsx('font-playfair-italic', 'text-[#111]/90', 'leading-none', 'text-[clamp(26px,4vw,50px)]', 'mt-2')}>
+          <span className="font-playfair-italic text-[#111]/90 leading-none text-[clamp(26px,4vw,50px)] mt-2">
             Photographer
           </span>
         </div>
       </div>
 
       {/* 3-col photo grid */}
-      <div className={clsx('relative', 'z-10', 'flex', 'flex-col', 'md:flex-row', 'justify-center', 'items-center', 'gap-6', 'lg:gap-10', 'xl:gap-12', 'w-full', 'max-w-[1400px]', 'mx-auto', 'px-4', 'lg:px-12')}>
-        <div className={clsx('photo-card', 'flex-1', 'w-full', 'max-w-[400px]', 'aspect-square', 'bg-white', 'border-[12px]', 'lg:border-[16px]', 'border-white', 'shadow-[0_20px_50px_rgba(0,0,0,0.15)]')}>
-          <img src="/frame03.jpg" alt="Graduation 1" className={clsx('w-full', 'h-full', 'object-cover')} />
+      <div className="relative z-10 flex flex-col md:flex-row justify-center items-center gap-6 lg:gap-10 xl:gap-12 w-full max-w-[1400px] mx-auto px-4 lg:px-12">
+        <div className="photo-card flex-1 w-full max-w-[400px] aspect-square bg-white border-[12px] lg:border-[16px] border-white shadow-[0_20px_50px_rgba(0,0,0,0.15)]">
+          <img src="/frame03.jpg" alt="Graduation 1" className="w-full h-full object-cover" />
         </div>
-        <div className={clsx('photo-card', 'flex-1', 'w-full', 'max-w-[400px]', 'aspect-square', 'bg-white', 'border-[12px]', 'lg:border-[16px]', 'border-white', 'shadow-[0_20px_50px_rgba(0,0,0,0.15)]')}>
-          <img src="/frame04.jpg" alt="Graduation 2" className={clsx('w-full', 'h-full', 'object-cover')} />
+        <div className="photo-card flex-1 w-full max-w-[400px] aspect-square bg-white border-[12px] lg:border-[16px] border-white shadow-[0_20px_50px_rgba(0,0,0,0.15)]">
+          <img src="/frame04.jpg" alt="Graduation 2" className="w-full h-full object-cover" />
         </div>
-        <div className={clsx('photo-card', 'flex-1', 'w-full', 'max-w-[400px]', 'aspect-square', 'bg-white', 'border-[12px]', 'lg:border-[16px]', 'border-white', 'shadow-[0_20px_50px_rgba(0,0,0,0.15)]')}>
-          <img src="/frame06.jpg" alt="Graduation 3" className={clsx('w-full', 'h-full', 'object-cover')} />
+        <div className="photo-card flex-1 w-full max-w-[400px] aspect-square bg-white border-[12px] lg:border-[16px] border-white shadow-[0_20px_50px_rgba(0,0,0,0.15)]">
+          <img src="/frame06.jpg" alt="Graduation 3" className="w-full h-full object-cover" />
         </div>
       </div>
 
